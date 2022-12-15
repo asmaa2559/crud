@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+        <div class="container  p-3">
+          <div class="title text-center">  
+            <h1>CRUD</h1>
+        <P>PRODUCT MANGEMENT SYSTEM</P>
+        </div>
+
+        <div class="inputs">
+            <input  type="text" placeholder="Product Name" id="title">
+            <div class="prices ">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input  onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small class="p-1 mx-1" id="total"></small>
+            </div>
+            <input  type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">creat</button>
+
+
+        </div>
+        <div class="auput">
+            <div class="search my-2">
+                <input onkeyup="searchData(this.value)" type="text" name="" id="search" placeholder="search">
+                <div class="search-button d-flex justify-content-between my-2">
+                    <button onclick="getSearchMood(this.id)" id="searchtitle">search by title</button>
+                    <button onclick="getSearchMood(this.id)"  id="searchcategory">search by category</button>
+
+                </div>
+
+            </div>
+        </div>
+
+          <div id="deleteAll">
+
+          </div>
+        <table class="w-100 text-center my-3">
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+
+                <th>category</th>
+                <th>update</th>
+                <th >delete</th>
+
+            </tr>
+            <tbody id="tbody">
+
+
+            </tbody>
+        </table>
+     </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
